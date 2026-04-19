@@ -4,10 +4,13 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: #f0f4f8;
-  min-height: 100vh;
 }
 
 .app {
@@ -15,14 +18,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  gap: 32px;
+  min-height: 100dvh; /* dynamic viewport height avoids mobile browser chrome overlap */
+  min-height: 100vh;  /* fallback for browsers without dvh */
+  gap: clamp(10px, 2.5vh, 28px);
+  padding: clamp(12px, 3vw, 24px);
 }
+
+/* ── Stats ───────────────────────────────────────────────────── */
 
 .stats {
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 10px;
   font-size: 13px;
   color: #888;
 }
@@ -46,7 +55,18 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Finished state */
+.queue-count {
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+.overall-pct {
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+/* ── Finished state ──────────────────────────────────────────── */
+
 .finished {
   display: flex;
   flex-direction: column;
@@ -55,14 +75,14 @@ body {
 }
 
 .finished-pct {
-  font-size: 64px;
+  font-size: clamp(48px, 12vw, 64px);
   font-weight: 700;
   color: #38a169;
   line-height: 1;
 }
 
 .finished-label {
-  font-size: 18px;
+  font-size: clamp(15px, 4vw, 18px);
   color: #2d3748;
   font-weight: 500;
 }
@@ -83,13 +103,16 @@ body {
   color: #e53e3e;
 }
 
-/* Flashcard flip */
+/* ── Flashcard ───────────────────────────────────────────────── */
+
 .flashcard-container {
+  position: relative;
   perspective: 1000px;
-  width: 480px;
-  height: 280px;
+  width: min(480px, calc(100vw - 32px));
+  height: clamp(200px, 38vh, 300px);
   cursor: pointer;
   user-select: none;
+  touch-action: pan-y; /* browser owns vertical scroll; we own horizontal swipe */
 }
 
 .flashcard {
@@ -111,19 +134,29 @@ body {
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+  overflow-y: auto;
+  /* face-inner handles centering; auto margin collapses on overflow so content stays reachable */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 36px;
 }
 
 .flashcard-back {
   transform: rotateY(180deg);
 }
 
+/* Centering wrapper: auto margins center when there's space; collapse to 0 when overflowing */
+.face-inner {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 28px;
+  width: 100%;
+}
+
 .face-label {
+  flex-shrink: 0;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -132,27 +165,68 @@ body {
 }
 
 .face-content {
-  font-size: 22px;
+  font-size: clamp(14px, 4vw, 22px);
   font-weight: 500;
   color: #1a202c;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
-/* Buttons */
+/* ── Swipe labels ────────────────────────────────────────────── */
+
+.swipe-label {
+  position: absolute;
+  top: 16px;
+  z-index: 10;
+  pointer-events: none;
+  font-size: clamp(13px, 3.5vw, 16px);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  border: 3px solid;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+.swipe-label-right {
+  left: 16px;
+  color: #38a169;
+  border-color: #38a169;
+  transform: rotate(-15deg);
+}
+
+.swipe-label-left {
+  right: 16px;
+  color: #e53e3e;
+  border-color: #e53e3e;
+  transform: rotate(15deg);
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+
 .buttons {
-  display: flex;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: min(480px, calc(100vw - 32px));
+}
+
+@media (min-width: 480px) {
+  .buttons {
+    display: flex;
+    gap: 12px;
+    width: auto;
+  }
 }
 
 .buttons button {
-  padding: 10px 22px;
+  padding: 10px 18px;
   border: none;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   font-weight: 500;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  white-space: nowrap;
 }
 
 .btn-undo {
@@ -190,10 +264,15 @@ body {
   cursor: not-allowed;
 }
 
-.empty {
-  font-size: 18px;
-  color: #888;
+/* ── Intro hint ──────────────────────────────────────────────── */
+
+.intro-hint {
+  font-size: 12px;
+  color: #a0aec0;
+  text-align: center;
 }
+
+/* ── Toggle mode button ──────────────────────────────────────── */
 
 .btn-toggle-mode {
   background: none;
@@ -212,9 +291,11 @@ body {
   color: #4299e1;
 }
 
+/* ── Notification toast ──────────────────────────────────────── */
+
 .notification {
   position: fixed;
-  top: 24px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: #2d3748;
@@ -226,25 +307,10 @@ body {
   pointer-events: none;
   animation: notif-in 0.2s ease;
   z-index: 100;
+  white-space: nowrap;
 }
 
 @keyframes notif-in {
   from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
-.queue-count {
-  font-size: 13px;
-  color: #a0aec0;
-}
-
-.overall-pct {
-  font-size: 13px;
-  color: #a0aec0;
-}
-
-.intro-hint {
-  font-size: 12px;
-  color: #a0aec0;
-  margin-top: -16px;
 }

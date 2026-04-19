@@ -208,7 +208,7 @@ export default function App() {
       </div>
       {currentCard ? (
         <>
-          <Flashcard card={currentCard} flipped={flipped} definitionFirst={definitionFirst} onFlip={() => setFlipped(f => !f)} />
+          <Flashcard card={currentCard} flipped={flipped} definitionFirst={definitionFirst} onFlip={() => setFlipped(f => !f)} onSwipeLeft={addToBack} onSwipeRight={removeFromDeck} />
           <div className="buttons">
             <button className="btn-undo" onClick={undo} disabled={history.length === 0}>Undo</button>
             <button className="btn-add-back" onClick={addToBack}>Add to Back</button>
