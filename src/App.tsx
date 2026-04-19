@@ -54,6 +54,11 @@ export default function App() {
       .then(text => {
         const parsed = parseCSV(text)
         if (parsed.length === 0) throw new Error('No valid cards found in flashcards.csv')
+        // Fisher-Yates shuffle
+        for (let i = parsed.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [parsed[i], parsed[j]] = [parsed[j], parsed[i]]
+        }
         originalCardsRef.current = parsed
         const saved = loadSaved()
         if (saved && saved.total === parsed.length) {
