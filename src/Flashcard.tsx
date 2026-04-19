@@ -14,16 +14,22 @@ const SWIPE_THRESHOLD = 72
 
 function FaceContent({ text }: { text: string }) {
   const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
-  if (lines.length > 1) {
-    return (
+  if (lines.length <= 1) return <p className="face-content">{text}</p>
+
+  const hasHeader = lines[0].endsWith(':')
+  const header = hasHeader ? lines[0] : null
+  const items  = hasHeader ? lines.slice(1) : lines
+
+  return (
+    <div className="face-list-block">
+      {header && <p className="face-list-header">{header}</p>}
       <ul className="face-list">
-        {lines.map((line, i) => (
+        {items.map((line, i) => (
           <li key={i} className={/^\d+\./.test(line) ? 'numbered' : undefined}>{line}</li>
         ))}
       </ul>
-    )
-  }
-  return <p className="face-content">{text}</p>
+    </div>
+  )
 }
 
 export default function Flashcard({ card, flipped, definitionFirst, onFlip, onSwipeLeft, onSwipeRight }: Props) {
