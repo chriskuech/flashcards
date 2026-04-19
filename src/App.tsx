@@ -2,7 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import type { Card } from './deck'
 import Flashcard from './Flashcard'
 import { parseCSV } from './parseCSV'
+import type { LeveledCard } from './parseCSV'
 import './App.css'
+
+function shuffleWithinLevels(cards: LeveledCard[]): Card[] {
+  const levels = [...new Set(cards.map(c => c.level))].sort((a, b) => a - b)
+  return levels.flatMap(level => {
+    const group = cards.filter(c => c.level === level)
+    for (let i = group.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [group[i], group[j]] = [group[j], group[i]]
+    }
+    return group.map(({ term, definition }) => ({ term, definition }))
+  })
+}
 
 const INITIAL_BATCH = 5
 const DRAW_BATCH = 3
@@ -51,13 +64,10 @@ export default function App() {
       .then(text => {
         const parsed = parseCSV(text)
         if (parsed.length === 0) throw new Error('No valid cards found in flashcards.csv')
-        for (let i = parsed.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [parsed[i], parsed[j]] = [parsed[j], parsed[i]]
-        }
-        originalCardsRef.current = parsed
+        const ordered = shuffleWithinLevels(parsed)
+        originalCardsRef.current = ordered
         const saved = loadSaved()
-        if (saved && saved.total === parsed.length) {
+        if (saved && saved.total === ordered.length) {
           setCards(saved.cards)
           setQueue(saved.queue ?? [])
           setTotal(saved.total)
@@ -68,7 +78,7 @@ export default function App() {
         } else {
           setCards(parsed.slice(0, INITIAL_BATCH))
           setQueue(parsed.slice(INITIAL_BATCH))
-          setTotal(parsed.length)
+          setTotal(ordered.length)
         }
       })
       .catch(err => setError(err.message))
