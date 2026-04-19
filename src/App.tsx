@@ -86,7 +86,6 @@ export default function App() {
   }
 
   const currentCard = cards[currentIndex] ?? null
-  const active = removed + cards.length
 
   function save() {
     setHistory(h => [...h, { cards: [...cards], queue: [...queue], index: currentIndex, removed }])
@@ -153,7 +152,9 @@ export default function App() {
       </button>
 
       <div className="stats">
-        <span>{active} active</span>
+        <span>{queue.length} inactive</span>
+        <span className="divider">·</span>
+        <span>{cards.length} active</span>
         <span className="divider">·</span>
         <span>{removed} mastered</span>
         <span className="divider">·</span>
