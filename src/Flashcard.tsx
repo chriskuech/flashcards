@@ -84,10 +84,10 @@ export default function Flashcard({ card, flipped, definitionFirst, onFlip, onSw
       onTouchEnd={onTouchEnd}
     >
       {dragX < -6 && (
-        <div className="swipe-label swipe-label-left" style={{ opacity: labelOpacity }}>AGAIN</div>
+        <div className="swipe-label swipe-label-left" style={{ opacity: labelOpacity }}>GOT IT</div>
       )}
       {dragX > 6 && (
-        <div className="swipe-label swipe-label-right" style={{ opacity: labelOpacity }}>GOT IT</div>
+        <div className="swipe-label swipe-label-right" style={{ opacity: labelOpacity }}>AGAIN</div>
       )}
       <div className="flashcard">
         <div className="flashcard-face flashcard-front">

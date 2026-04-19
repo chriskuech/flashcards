@@ -160,8 +160,8 @@ export default function App() {
             flipped={flipped}
             definitionFirst={definitionFirst}
             onFlip={() => setFlipped(f => !f)}
-            onSwipeLeft={addToBack}
-            onSwipeRight={removeFromDeck}
+            onSwipeLeft={removeFromDeck}
+            onSwipeRight={addToBack}
           />
           <div className="buttons">
             <button className="btn-undo"  onClick={undo}          disabled={history.length === 0}>Undo</button>

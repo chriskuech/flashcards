@@ -151,15 +151,15 @@ body {
 
 .swipe-label-right {
   left: 16px;
-  color: #38a169;
-  border-color: #38a169;
+  color: #e53e3e;
+  border-color: #e53e3e;
   transform: rotate(-15deg);
 }
 
 .swipe-label-left {
   right: 16px;
-  color: #e53e3e;
-  border-color: #e53e3e;
+  color: #38a169;
+  border-color: #38a169;
   transform: rotate(15deg);
 }
 
