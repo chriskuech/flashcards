@@ -70,6 +70,7 @@ body {
 .finished-detail {
   font-size: 13px;
   color: #a0aec0;
+  margin-bottom: 8px;
 }
 
 .loading {
@@ -169,6 +170,11 @@ body {
   color: #fff;
 }
 
+.btn-reset {
+  background: #e2e8f0;
+  color: #718096;
+}
+
 .buttons button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
@@ -204,4 +210,41 @@ body {
 .btn-toggle-mode:hover {
   border-color: #4299e1;
   color: #4299e1;
+}
+
+.notification {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2d3748;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+  animation: notif-in 0.2s ease;
+  z-index: 100;
+}
+
+@keyframes notif-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.queue-count {
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+.overall-pct {
+  font-size: 13px;
+  color: #a0aec0;
+}
+
+.intro-hint {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-top: -16px;
 }
