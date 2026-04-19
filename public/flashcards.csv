@@ -1,23 +1,112 @@
 term,definition,level
-"Name the 8 Limbs of Yoga","Yama (restraints), Niyama (observances), Asana (posture), Pranayama (breath), Pratyahara (withdrawal), Dharana (focus), Dhyana (meditation), Samadhi (absorption)",1
-"Name the 8 Ashtanga Drishti","Nasagrai (nose tip), Bhrumadhya (third eye), Nabi Chakra (navel), Hastagrai (hand), Padhayoragrai (toes), Parsva (side), Angusta Ma Dyai (thumbs), Urdhva (upward)",1
-"Name the 4 Ligaments of the Knee","Anterior Cruciate Ligament (ACL), Posterior Cruciate Ligament (PCL), Lateral Collateral Ligament (LCL), Medial Collateral Ligament (MCL)",1
-"Name 5 of the 9 Anatomical Movements","Flexion, Extension, Adduction, Abduction, Pronation, Supination, Rotation, Dorsiflexion, Plantar Flexion",1
-"Name the 9 Obstacles to Yoga Sadhana (Antarayas)","Vyadhi (disease), Styana (dullness), Samshaya (doubt), Pramada (negligence), Alasya (laziness), Avirati (craving), Bhranti Darshana (delusion), Alabdha Bhumikatva (non-attainment), Anavasthitatva (instability)",1
-"Name the 6 Requirements of Pranayama","Asana (posture), Kumbhaka (retention), Mudra (gesture), Bandha (lock), Dhyana (meditation), Mantra (chant)",1
-"Name the 5 Elements (Panchamahabhuta) in Order","Space (Akasha), Air (Vayu), Fire (Agni), Water (Jala), Earth (Prithvi)",1
-"Name the 12 Steps of Hatha Yoga Surya Namaskar (Bihar School)","1. Exhale, hands at heart in prayer position — Pranamasana | 2. Inhale, raise your arms — Hasta Uttanasana | 3. Exhale, touch your toes — Padahastasana | 4. Inhale, step left leg back — Ashwa Sanchalanasana | 5. Exhale, step right leg back, raise your hips — Parvatasana | 6. In the same breath, knees, chest, chin to the ground — Ashtanga Namaskara | 7. Inhale, raise your chest — Bhujangasana | 8. Exhale, back to the mountain — Parvatasana | 9. Inhale, step the left leg forward — Ashwa Sanchalanasana | 10. Exhale, step the right leg forward — Padahastasana | 11. Inhale, raise your arms — Hasta Uttanasana | 12. Exhale, hands to prayer position — Pranamasana | 13. (repeat with opposite legs)",1
+"Name the 8 Limbs of Yoga","Yama (restraints)
+Niyama (observances)
+Asana (posture)
+Pranayama (breath)
+Pratyahara (withdrawal)
+Dharana (focus)
+Dhyana (meditation)
+Samadhi (absorption)",1
+"Name the 8 Ashtanga Drishti","Nasagrai (nose tip)
+Bhrumadhya (third eye)
+Nabi Chakra (navel)
+Hastagrai (hand)
+Padhayoragrai (toes)
+Parsva (side)
+Angusta Ma Dyai (thumbs)
+Urdhva (upward)",1
+"Name the 4 Ligaments of the Knee","Anterior Cruciate Ligament (ACL)
+Posterior Cruciate Ligament (PCL)
+Lateral Collateral Ligament (LCL)
+Medial Collateral Ligament (MCL)",1
+"Name 5 of the 9 Anatomical Movements","Flexion
+Extension
+Adduction
+Abduction
+Pronation
+Supination
+Rotation
+Dorsiflexion
+Plantar Flexion",1
+"Name the 9 Obstacles to Yoga Sadhana (Antarayas)","Vyadhi (disease)
+Styana (dullness)
+Samshaya (doubt)
+Pramada (negligence)
+Alasya (laziness)
+Avirati (craving)
+Bhranti Darshana (delusion)
+Alabdha Bhumikatva (non-attainment)
+Anavasthitatva (instability)",1
+"Name the 6 Requirements of Pranayama","Asana (posture)
+Kumbhaka (retention)
+Mudra (gesture)
+Bandha (lock)
+Dhyana (meditation)
+Mantra (chant)",1
+"Name the 5 Elements (Panchamahabhuta) in Order","Space (Akasha)
+Air (Vayu)
+Fire (Agni)
+Water (Jala)
+Earth (Prithvi)",1
+"Name the 12 Steps of Hatha Yoga Surya Namaskar (Bihar School)","1. Exhale, hands at heart in prayer position — Pranamasana
+2. Inhale, raise your arms — Hasta Uttanasana
+3. Exhale, touch your toes — Padahastasana
+4. Inhale, step left leg back — Ashwa Sanchalanasana
+5. Exhale, step right leg back, raise your hips — Parvatasana
+6. In the same breath, knees, chest, chin to the ground — Ashtanga Namaskara
+7. Inhale, raise your chest — Bhujangasana
+8. Exhale, back to the mountain — Parvatasana
+9. Inhale, step the left leg forward — Ashwa Sanchalanasana
+10. Exhale, step the right leg forward — Padahastasana
+11. Inhale, raise your arms — Hasta Uttanasana
+12. Exhale, hands to prayer position — Pranamasana
+13. (repeat with opposite legs)",1
 "What is an Asana?","Sthiran Sukham Asanam — a posture that is stable (physically and emotionally) and comfortable, with correct alignment (Yoga Sutras II.46)",1
-"Name the 4 Types of Yoga","Jnana Yoga (knowledge), Bhakti Yoga (devotion), Karma Yoga (action), Raja Yoga (royal)",1
-"Name the 6 Astika Schools (Orthodox Hindu Philosophy)","Nyaya, Vaisheshika, Samkhya, Yoga, Mimamsa (Purva Mimamsa), Vedanta (Uttara Mimamsa)",1
-"Name the 3 Nastika Schools (Heterodox Philosophy)","Buddhism, Jainism, Charvaka",1
-"Name the 3 Doshas","Vata (wind), Pitta (fire), Kapha (earth)",1
-"Name the 5 Yamas","Ahimsa (non-violence), Satya (truth), Asteya (non-stealing), Brahmacharya (continence), Aparigraha (non-possessiveness)",1
-"Name the 6 Shatkarma (Shat Kriyas)","Dhauti (cleansing), Basti (enema), Neti (nasal), Nauli (abdominal), Trataka (gazing), Kapalabhati (skull-shining)",1
+"Name the 4 Types of Yoga","Jnana Yoga (knowledge)
+Bhakti Yoga (devotion)
+Karma Yoga (action)
+Raja Yoga (royal)",1
+"Name the 6 Astika Schools (Orthodox Hindu Philosophy)","Nyaya
+Vaisheshika
+Samkhya
+Yoga
+Mimamsa (Purva Mimamsa)
+Vedanta (Uttara Mimamsa)",1
+"Name the 3 Nastika Schools (Heterodox Philosophy)","Buddhism
+Jainism
+Charvaka",1
+"Name the 3 Doshas","Vata (wind)
+Pitta (fire)
+Kapha (earth)",1
+"Name the 5 Yamas","Ahimsa (non-violence)
+Satya (truth)
+Asteya (non-stealing)
+Brahmacharya (continence)
+Aparigraha (non-possessiveness)",1
+"Name the 6 Shatkarma (Shat Kriyas)","Dhauti (cleansing)
+Basti (enema)
+Neti (nasal)
+Nauli (abdominal)
+Trataka (gazing)
+Kapalabhati (skull-shining)",1
 "Antahkarana","The inner instrument; the fourfold internal faculty through which consciousness operates: Mana, Buddhi, Citta, Ahamkara",1
-"Name the 4 Components of Antahkarana","Mana (mind), Buddhi (intellect), Citta (memory), Ahamkara (ego)",1
+"Name the 4 Components of Antahkarana","Mana (mind)
+Buddhi (intellect)
+Citta (memory)
+Ahamkara (ego)",1
 "Define Yoga","Yoga citta vritti nirodha — yoga is the cessation of fluctuations of the mind",1
 "Define Hatha Yoga","Traditional and foundational branch of yoga combining asanas, pranayama, and meditation to balance mind and body",1
+"Benefits of Triangle Pose (Trikonasana)","Stretches hamstrings, groins, hips, IT band, and spine
+Strengthens thighs, knees, and ankles
+Opens chest and shoulders
+Stimulates abdominal organs and improves digestion
+Relieves back pain and sciatica
+Builds balance and stability
+Reduces stress and anxiety",1
+"3–4 Prep Exercises for Downward Dog — and why","1. Cat-Cow: warms the spine, mobilizes wrists and shoulders
+2. Plank Pose: builds shoulder stability and core strength needed to hold DD
+3. Puppy Pose (Uttana Shishosana): opens upper back and stretches lats, mimicking DD arm extension
+4. Standing Forward Fold (Uttanasana): lengthens hamstrings and calves, easing posterior chain tension that prevents heels from grounding",1
 "Yama","1st limb — ethical restraints governing behavior toward others: non-violence (Ahimsa), truthfulness (Satya), non-stealing (Asteya), continence (Brahmacharya), non-possessiveness (Aparigraha)",2
 "Niyama","2nd limb — personal observances and self-disciplines: cleanliness (Saucha), contentment (Santosha), austerity (Tapas), self-study (Svadhyaya), surrender to the divine (Ishvara Pranidhana)",2
 "Asana","3rd limb — sthiran sukham asanam: a stable (physically and emotionally) and comfortable posture where alignment is correct; also a requirement of pranayama: a stable, comfortable posture that allows free breath movement and sustained concentration",2
@@ -43,8 +132,6 @@ term,definition,level
 "Rotation","Movement of a body part around its own longitudinal axis",2
 "Dorsiflexion","Flexion of the foot upward toward the shin, decreasing the angle at the ankle joint",2
 "Plantar Flexion","Extension of the foot downward away from the shin (pointing the toes), increasing the angle at the ankle joint",2
-"Benefits of Triangle Pose (Trikonasana)","Stretches hamstrings, groins, hips, IT band, and spine; strengthens thighs, knees, and ankles; opens chest and shoulders; stimulates abdominal organs; improves digestion; relieves back pain and sciatica; builds balance and stability; reduces stress and anxiety",1
-"3–4 Prep Exercises for Downward Dog — and why","1. Cat-Cow: warms the spine, mobilizes wrists and shoulders; 2. Plank Pose: builds the shoulder stability and core strength needed to hold DD; 3. Puppy Pose (Uttana Shishosana): opens upper back and stretches lats, mimicking DD arm extension; 4. Standing Forward Fold (Uttanasana): lengthens hamstrings and calves, easing the posterior chain tension that prevents heels from grounding",1
 "Vyadhi","Antaraya: physical disease or ailment (e.g., chronic pain) that disrupts practice",2
 "Styana","Antaraya: mental dullness or lack of interest; apathy toward practice",2
 "Samshaya","Antaraya: doubt; uncertainty about the path or one's own capability",2

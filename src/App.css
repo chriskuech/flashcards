@@ -179,6 +179,33 @@ body {
   line-height: 1.45;
 }
 
+.face-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+  font-size: clamp(11px, 2.8vw, 15px);
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.face-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.face-list li:not(.numbered)::before {
+  content: '•';
+  color: var(--blue);
+  flex-shrink: 0;
+}
+
 /* ── Swipe labels ────────────────────────────────────────────── */
 
 .swipe-label {

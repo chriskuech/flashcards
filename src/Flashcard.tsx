@@ -12,6 +12,20 @@ interface Props {
 
 const SWIPE_THRESHOLD = 72
 
+function FaceContent({ text }: { text: string }) {
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean)
+  if (lines.length > 1) {
+    return (
+      <ul className="face-list">
+        {lines.map((line, i) => (
+          <li key={i} className={/^\d+\./.test(line) ? 'numbered' : undefined}>{line}</li>
+        ))}
+      </ul>
+    )
+  }
+  return <p className="face-content">{text}</p>
+}
+
 export default function Flashcard({ card, flipped, definitionFirst, onFlip, onSwipeLeft, onSwipeRight }: Props) {
   const front = definitionFirst ? { label: 'Definition', text: card.definition } : { label: 'Term',       text: card.term }
   const back  = definitionFirst ? { label: 'Term',       text: card.term       } : { label: 'Definition', text: card.definition }
@@ -93,13 +107,13 @@ export default function Flashcard({ card, flipped, definitionFirst, onFlip, onSw
         <div className="flashcard-face flashcard-front">
           <div className="face-inner">
             <span className="face-label">{front.label}</span>
-            <p className="face-content">{front.text}</p>
+            <FaceContent text={front.text} />
           </div>
         </div>
         <div className="flashcard-face flashcard-back">
           <div className="face-inner">
             <span className="face-label">{back.label}</span>
-            <p className="face-content">{back.text}</p>
+            <FaceContent text={back.text} />
           </div>
         </div>
       </div>
