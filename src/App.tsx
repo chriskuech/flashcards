@@ -118,7 +118,14 @@ export default function App() {
     if (queue.length === 0) return
     save()
     const batch = queue.slice(0, DRAW_BATCH)
-    setCards(c => [...c, ...batch])
+    setCards(c => {
+      const next = [...c, ...batch]
+      for (let i = next.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [next[i], next[j]] = [next[j], next[i]]
+      }
+      return next
+    })
     setQueue(q => q.slice(DRAW_BATCH))
   }
 
