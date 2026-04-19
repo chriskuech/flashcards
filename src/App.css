@@ -184,8 +184,13 @@ body {
 }
 
 .btn-undo  { background: #e2e8f0; color: #4a5568; }
-.btn-draw  { background: #4299e1; color: #fff; font-size: clamp(15px, 3.5vw, 17px); padding: 13px 28px; }
+.btn-draw  { background: #4299e1; color: #fff; }
 .btn-reset { background: #e2e8f0; color: #718096; }
+
+.buttons .btn-draw {
+  font-size: clamp(15px, 3.5vw, 17px);
+  padding: 13px 28px;
+}
 
 .buttons button:hover:not(:disabled) {
   transform: translateY(-2px);
